@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "PkgDefCompare": {
+      "commandName": "Project",
+      "commandLineArgs": "--left-file \"D:\\Code\\project-system\\src\\Microsoft.VisualStudio.Editors\\Microsoft.VisualStudio.Editors.pkgdef\" --right-file \"D:\\Code\\project-system\\artifacts\\Debug\\bin\\Dlls\\Microsoft.VisualStudio.Editors.pkgdef\""
+    }
+  }
+}
