@@ -40,6 +40,8 @@ namespace PkgDefCompare
             return file;
         }
 
+        internal string GetValue(string section, string key) => _sections[section][key];
+
         internal IEnumerable<string> GetKeys(string section) => _sections[section].Keys.Cast<string>();
 
         internal bool HasKey(string section, string key) => _sections[section].ContainsKey(key);

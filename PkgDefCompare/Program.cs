@@ -27,7 +27,21 @@ namespace PkgDefCompare
                         continue;
                     }
 
+                    string leftValue = left.GetValue(section, key);
+                    string rightValue = right.GetValue(section, key);
+                    if (!string.Equals(leftValue, rightValue, StringComparison.OrdinalIgnoreCase))
+                    {
+                        // This change is acceptable
+                        if (leftValue.Equals(@"$System$\mscoree.dll") && rightValue.Equals(@"$WinDir$\SYSTEM32\MSCOREE.DLL"))
+                        {
+                            continue;
+                        }
 
+                        Console.WriteLine("Value differenct: " + section + ", " + key);
+                        Console.WriteLine("    |" + leftValue + "|");
+                        Console.WriteLine("    |" + rightValue + "|");
+                        continue;
+                    }
                 }
             }
         }
